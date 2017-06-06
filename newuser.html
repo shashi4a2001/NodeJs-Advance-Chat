@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <link rel="Stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/45e03a14ce.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socketutil.js"></script>
+     <script>
+         $(document).ready(function () {
+             $('#txtuserid').focus();
+         });
+    </script>
+    
+</head>
+<body style="margin:10px;">
+
+<div id="dvusermaster">
+<h3 style="color: #d35400;">New User Registration..</h3>
+<hr style="color: #d35400;"/>
+    <input id="hdnuid" type="hidden" />
+    <table>
+    <tr>
+    <td><span style="font-size:18px;">User Id :  </span></td>
+    <td><input type="text" id="txtuserid" /></td>
+    </tr>
+     <tr>
+    <td><span style="font-size:18px;">Password :  </span></td>
+    <td><input type="password" id="txtpassword" /></td>
+    </tr>
+     
+     <tr>
+    <td><span style="font-size:18px;">User Name :  </span></td>
+    <td><input type="text" id="txtusername" /></td>
+    </tr>
+     <tr>
+    <td></td>
+    <td><input type="button" id="btnregister" value="Register" /></td>
+    </tr>
+    <tr>
+    <td colspan="2"><a href='/chatlogin'>Start Chat</a></td>
+    </tr>
+    </table>
+ 
+
+ 
+</div>
+  
+ 
+</body>
+</html>

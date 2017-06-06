@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <link rel="Stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/45e03a14ce.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socketutil.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#txtuserid').focus();
+        });
+    </script>
+    
+</head>
+<body  style="margin:10px;">
+
+<div id="dvusermaster">
+<h3 style="color: #d35400;">Login into Node Js Chat Application..</h3>
+<hr style="color: #d35400;"/>
+    <input id="hdnuid" type="hidden" />
+    <input id="hdnpass" type="hidden" />
+    <table>
+    <tr>
+    <td><span style="font-size:18px;">User Id :  </span></td>
+    <td><input type="text" id="txtuserid" /></td>
+    </tr>
+     <tr>
+    <td><span style="font-size:18px;">Password :  </span></td>
+    <td><input type="password" id="txtpassword" /></td>
+    </tr>
+     <tr>
+    <td></td>
+    <td><input type="button" id="btnlogin" value="Login" /></td>
+    </tr>
+     <tr>
+    <td colspan="2"><b><a href='/newuser'  style='float:right;'>New User Registration</a></b></td>
+    </tr>
+    </table>
+ 
+
+ 
+</div>
+ 
+    <div  style=" display:none;">
+        <div class="dvuserlist">
+            <div>
+                User List:-----</div>
+            <ul id="uluserlist">
+            </ul>
+        </div>
+        <div style="float: right; width: 80%">
+            <ul id="messages">
+            </ul>
+            <div class="chatare">
+                <input id="m" autocomplete="off" />
+                <button id='btn'>
+                    Send11</button>
+            </div>
+        </div>
+    </div>
+ 
+ 
+ 
+ 
+    <div  id="dvchatmaster" style=" display:none;" >
+    <div>
+    <a href="#" id ='btnsignout' style='float:right; margin-right:200px;'><b> Sign Out </b></a>
+        </div>
+    <div id='divwelcome' style='font-weight:bold; font-size:16px; color: #d35400;'> </div>
+               
+               
+<div class="main_section">
+   <div class="container">
+      <div class="chat_container">
+         <div class="col-sm-3 chat_sidebar">
+                 <div class="row">
+            <div id="custom-search-input">
+               <div class="input-group col-md-12">
+                  <input type="text" class="  search-query form-control" placeholder="Conversation" />
+                  <button class="btn btn-danger" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+               </div>
+            </div>
+    
+            <div class="member_list">
+               <ul class="list-unstyled" id="contact-list">
+             
+               </ul>
+            </div></div>
+         </div>
+         <!--chat_sidebar-->
+                               
+                                 
+         <div class="col-sm-9 message_section">
+                                <div class="row">
+                                <div class="new_message_head">
+                                <div class="pull-left"><button><i class="fa fa-plus-square-o" aria-hidden="true"></i> Chating with :</button> <span id='spanchatwithpersn'></span></div>
+                               
+                                 </div><!--new_message_head-->
+                               
+                                 <div class="chat_area">
+                                <ul class="list-unstyled">
+                                <li class="left clearfix" id="dvchatmsg">
+                    
+                  </li>
+
+                                 
+                                 </ul>
+                                </div><!--chat_area-->
+          <div class="message_write">
+                 <input type="textbox" class="form-control" placeholder="type a message" id="txtmsg"/>
+                                <div class="clearfix"></div>
+                                <div class="chat_bottom"><a href="#" class="pull-right btn btn-success" id="btnsend">Send</a></div>
+                                </div>
+                                </div>
+         </div> <!--message_section-->
+      </div>
+   </div>
+</div>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+<!--
+    <div>
+ 
+        <div style='float:left; background-color: #2471a3; height:500px; width:20%; padding:5px; font-size:16px;'>
+            <h4 style='color:#fff'>User List...</h4>
+            <hr />
+            <div id='contact-list' style="color:White;">
+ 
+            </div>
+        </div>
+ 
+        <div style='float:left; position:relative; background-color: #d6eaf8; height:500px; width:80%; padding:5px; font-size:16px;'>
+        <div style='font-weight:bold;'> <span>Chating with :</span><span id='spanchatwithpersn'>Unknown</span></div>
+        <hr style='color:#fff'/>
+ 
+        <div id='dvchatmsg' style='height:350px; overflow-y:auto;'>
+       
+         </div>
+ 
+        <div style='position:absolute; bottom:2px; width:99%; padding:10px; background-color:#2471a3;'>
+            <input id="txtmsg" type="text" style='width:80%'/><input id="btnsend" type="button" value="Send Message"  style='width:20%'/></div>
+        </div>
+    </div> -->
+ 
+ 
+</div>
+ 
+ 
+ 
+ 
+</body>
+</html>
